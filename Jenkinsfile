@@ -12,7 +12,7 @@ node {
 			sh 'echo "All Tests passed"'
 	}
 	stage('Push Image') {
-		docker.withRegistry('https://harborlab.mdlwr.se", 'docker-hub-credentials') {
+		docker.withRegistry('https://harborlab.mdlwr.se', 'docker-hub-credentials') {
 			app.push("${env.BUILD_NUMBER}")
 			app.push("latest")
 		}
