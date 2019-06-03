@@ -1,11 +1,11 @@
 node {
 	def app
-	stage('clone repository') {
+	stage('Clone Repository') {
 		chckout scm
 	}
 
 	stage('Build image') {
-		app = docker.buildd("kaziri23/devops")
+		app = docker.build("kaziri23/devops")
 	}
 	stage("Test image") {
 		app.inside {
