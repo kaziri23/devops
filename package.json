@@ -1,0 +1,21 @@
+{
+	"name": "ci-cd-hellonode",
+	"version": "0.0.1",
+	"Description": "Hello there, server!",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node main.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kaziri23/ci-cd"
+	},
+	"keywords": [
+		"node",
+		"docker",
+		"dockerfile"
+	],
+	"author": "allank275@gmail.com",
+	"license": "Apache 2"
+}
