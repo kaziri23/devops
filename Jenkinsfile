@@ -1,7 +1,7 @@
 node {
 	def app
 	stage('Clone Repository') {
-		chckout scm
+		checkout scm
 	}
 
 	stage('Build image') {
@@ -10,6 +10,7 @@ node {
 	stage("Test image") {
 		app.inside {
 			sh 'echo "All Tests passed"'
+		}
 	}
 	stage('Push Image') {
 		docker.withRegistry('https://harborlab.mdlwr.se', 'docker-hub-credentials') {
