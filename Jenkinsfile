@@ -12,7 +12,7 @@ node {
 	}
 
 	stage('Build image') {
-		app = docker.build("kaziri23/devops")
+		app = docker.build("test/devops")
 	}
 	stage("Test image") {
 		app.inside {
